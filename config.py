@@ -78,6 +78,12 @@ keys = [
     Key([mod], "m", lazy.spawn("rofi -show run")),
     Key([mod, 'shift'], "m", lazy.spawn("rofi -show")),
 
+    # Volumen
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+
+
 ]
 
 groups = [Group(i) for i in "123456789"]
