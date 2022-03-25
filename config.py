@@ -29,6 +29,9 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+# Para ejecutar aplicaciones del sistema
+import os 
+
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -210,3 +213,15 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+# Lista de comandos que se ejecutan cuando unicie el Qtile
+autostart [
+    "feh --bg-fill ~/.config/qtile/fondo.jpg",    
+    "picom --no-vsync &"
+    "nm-applet &",
+]
+
+for x in autostart:
+    os.system(x)
+
+# Fin del comando de aplicaciones de inicio en Qtile    
