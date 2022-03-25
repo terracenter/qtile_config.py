@@ -83,6 +83,10 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
 
+    # Brillo
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
 
 ]
 
